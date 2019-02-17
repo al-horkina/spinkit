@@ -1,0 +1,30 @@
+.cubes {
+  margin: 150px auto;
+  position: relative;
+  height: 100px;
+  width: 100px;
+
+
+  .cube__first,
+  .cube__second {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    margin: 0 auto;
+
+    -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  }
+
+  .cube__second {
+    -webkit-animation-delay: -0.9s;
+  }
+}
+
+@-webkit-keyframes cubemove {
+  25% {transform: translateX(42px) rotate(-90deg) scale(0.5);}
+  50% {transform: translateX(42px) translateY(42px) rotate(-179deg);}
+  50.1% {transform: translateX(42px) translateY(42px) rotate(-180deg);}
+  75% {transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);}
+  100% {transform: rotate(-360deg);}
+
+}
